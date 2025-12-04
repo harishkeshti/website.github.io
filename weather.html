@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Report App</title>
+  <link rel="stylesheet" href="weather.css" />
+</head>
+<body>
+  <div class="app">
+    <h1 class="title">🌤 Weather Report</h1>
+    <p class="subtitle">Enter a city name to get current weather</p>
+
+    <div class="search-box">
+      <input
+        type="text"
+        id="cityInput"
+        placeholder="Enter city name e.g. Hyderabad"
+      />
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <div id="message" class="message"></div>
+
+    <div id="weatherCard" class="weather-card hidden">
+      <h2 id="cityName"></h2>
+      <p id="dateTime" class="datetime"></p>
+
+      <div class="weather-main">
+        <img id="weatherIcon" alt="Weather Icon" />
+        <div>
+          <p id="temperature" class="temp"></p>
+          <p id="description" class="description"></p>
+        </div>
+      </div>
+
+      <div class="weather-details">
+        <div class="detail">
+          <span>🌡 Feels Like</span>
+          <p id="feelsLike"></p>
+        </div>
+        <div class="detail">
+          <span>💧 Humidity</span>
+          <p id="humidity"></p>
+        </div>
+        <div class="detail">
+          <span>🌬 Wind Speed</span>
+          <p id="wind"></p>
+        </div>
+        <div class="detail">
+          <span>📈 Pressure</span>
+          <p id="pressure"></p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>Powered by <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap</a></p>
+    </footer>
+  </div>
+
+  <script src="weather.js"></script>
+</body>
+</html>

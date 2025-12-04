@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Helmet Store</title>
+  <link rel="stylesheet" href="helmet.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo">🏍 Helmet Store</div>
+    <div class="cart-info">
+      <span>Items: <span id="cart-count">0</span></span>
+      <span>Total: ₹<span id="cart-total">0</span></span>
+      <button id="view-cart-btn">View Cart</button>
+    </div>
+  </header>
+
+  <!-- Hero / Banner -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Premium Helmets for Your Ride</h1>
+      <p>Safety, style, and comfort — all in one place.</p>
+      <a href="#products" class="btn-primary">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="products-section">
+    <h2>Our Helmets</h2>
+    <div class="products-grid">
+      
+      <!-- Product 1 -->
+      <div class="product-card">
+        <img src="helmet1.png" alt="Racing Helmet" />
+        <h3>Racing Helmet</h3>
+        <p class="price">₹2500</p>
+        <button 
+          class="add-to-cart" 
+          data-name="Racing Helmet" 
+          data-price="2500">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <img src="helmet3.png" alt="Classic Helmet" />
+        <h3>Classic Helmet</h3>
+        <p class="price">₹1800</p>
+        <button 
+          class="add-to-cart" 
+          data-name="Classic Helmet" 
+          data-price="1800">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <img src="helmet5.png" alt="Off-Road Helmet" />
+        <h3>Off-Road Helmet</h3>
+        <p class="price">₹3200</p>
+        <button 
+          class="add-to-cart" 
+          data-name="Off-Road Helmet" 
+          data-price="3200">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card">
+        <img src="helmet6.png" alt="Urban Helmet" />
+        <h3>Urban Helmet</h3>
+        <p class="price">₹2200</p>
+        <button 
+          class="add-to-cart" 
+          data-name="Urban Helmet" 
+          data-price="2200">
+          Add to Cart
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Cart Section / Panel -->
+  <section id="cart-section" class="cart-section hidden">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <div class="cart-summary">
+      <p>Total Items: <span id="cart-count-2">0</span></p>
+      <p>Grand Total: ₹<span id="cart-total-2">0</span></p>
+      <!-- Demo payment link -->
+      <button id="checkout-btn" class="btn-primary">Proceed to Payment</button>
+      <button id="close-cart-btn" class="btn-secondary">Close</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Helmet Store.</p>
+  </footer>
+
+  <script src="helmet.js"></script>
+</body>
+</html>

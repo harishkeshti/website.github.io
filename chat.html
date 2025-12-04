@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Chat App</title>
+  <link rel="stylesheet" href="chat.css" />
+</head>
+<body>
+
+  <section id="chat" class="section chat-section">
+  <h2 class="section-title">💬 Chat with Me</h2>
+  <p class="section-subtitle">
+    Ask me about my projects, skills, or anything related to web development.
+  </p>
+
+  <div class="chat-widget">
+    <header class="chat-header">
+      <h3>Chat Bot</h3>
+      <span class="status-dot">● Online</span>
+    </header>
+
+    <div id="chat-window" class="chat-window">
+      <!-- Messages will appear here -->
+    </div>
+
+    <form id="chat-form" class="chat-input-area">
+      <input
+        type="text"
+        id="user-input"
+        placeholder="Type a message..."
+        autocomplete="off"
+      />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</section>
+  <script src="chat.js"></script>
+</body>
+</html>

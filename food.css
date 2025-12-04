@@ -1,0 +1,148 @@
+:root {
+  --accent: #ff6b35;
+  --muted: #6b7280;
+  --card: #ffffff;
+  --bg: #f6f7fb;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+}
+
+/* HEADER */
+header {
+  padding: 20px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.badge {
+  background: var(--accent);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* MENU */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-gap: 16px;
+}
+
+.card {
+  background: var(--card);
+  padding: 14px;
+  display: flex;
+  border-radius: 12px;
+  gap: 10px;
+  box-shadow: 0 4px 10px #00000010;
+}
+
+.item-thumb {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+  background: #ddd;
+}
+
+.item-info h3 {
+  margin: 0;
+}
+
+.add {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* CART */
+.cart {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px #0003;
+}
+
+.cart-list {
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.cart-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding: 6px 0;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+/* BUTTONS */
+button {
+  cursor: pointer;
+}
+
+.demo {
+  border: 2px dashed var(--accent);
+  background: transparent;
+  color: var(--accent);
+  padding: 8px;
+  border-radius: 10px;
+  margin-top: 8px;
+}
+
+/* MODAL */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: #00000060;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: #fff;
+  padding: 20px;
+  width: 90%;
+  max-width: 450px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.muted {
+  color: var(--muted);
+}

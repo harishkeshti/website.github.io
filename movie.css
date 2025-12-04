@@ -1,0 +1,207 @@
+/* ---------------- GLOBAL ---------------- */
+body {
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at top, #111 0%, #000 70%);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+header {
+  padding: 22px;
+  background: linear-gradient(90deg, #000, #1a1204, #000);
+  border-bottom: 1px solid #b8912a;
+  box-shadow: 0 0 25px rgba(184, 145, 42, 0.5);
+}
+
+.title {
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #e1b354;
+  text-shadow: 0 0 12px #e1b354, 0 0 20px #a17412;
+}
+
+/* ---------------- CONTAINER ---------------- */
+.container {
+  width: 90%;
+  max-width: 650px;
+  margin: 35px auto;
+  background: rgba(20, 20, 20, 0.85);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 0 40px rgba(184, 145, 42, 0.35);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 215, 95, 0.2);
+  animation: fadeIn 0.8s ease;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------- MOVIE DROPDOWN ---------------- */
+.movie-box label {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffd36b;
+}
+
+select {
+  padding: 10px;
+  border-radius: 8px;
+  background: #1e1b14;
+  color: #ffd36b;
+  border: 1px solid #a67c18;
+  outline: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+select:hover {
+  box-shadow: 0 0 12px rgba(255, 215, 95, 0.3);
+}
+
+/* ---------------- SEAT LEGEND ---------------- */
+.showcase {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px auto;
+  padding: 12px;
+  width: 90%;
+  border-radius: 12px;
+  background: rgba(39, 32, 18, 0.6);
+  border: 1px solid rgba(255, 215, 95, 0.1);
+}
+
+.showcase small {
+  color: #c9a44a;
+  font-weight: 500;
+}
+
+/* ---------------- SCREEN ---------------- */
+.screen {
+  background: linear-gradient(180deg, #e1b354, #8c6b1c);
+  height: 55px;
+  width: 85%;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 40px rgba(255, 200, 100, 0.4);
+  font-weight: bold;
+  padding-top: 12px;
+  letter-spacing: 2px;
+  color: #000;
+}
+
+/* ---------------- SEATS ---------------- */
+.seat-container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+  justify-items: center;
+}
+
+.seat {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: #201f1a;
+  border: 1px solid #4b3d1a;
+  position: relative;
+  box-shadow: 0 3px 0 #000;
+  transition: all 0.25s ease;
+}
+
+.seat:hover {
+  transform: translateY(-6px) scale(1.1);
+  cursor: pointer;
+  background: #2d2716;
+  box-shadow: 0 8px 12px rgba(255, 215, 95, 0.2);
+}
+
+/* Selected seat (Gold Glow) */
+.seat.selected {
+  background: linear-gradient(145deg, #ffd36b, #d7a632);
+  border-color: #614906;
+  box-shadow: 0 4px 15px rgba(255, 215, 95, 0.6);
+  transform: translateY(-4px);
+}
+
+/* Occupied */
+.seat.occupied {
+  background: #555;
+  border-color: #333;
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* ---------------- BUTTON ---------------- */
+.btn {
+  margin-top: 25px;
+  padding: 15px 35px;
+  background: linear-gradient(145deg, #e1b354, #b58829);
+  border-radius: 14px;
+  color: #000;
+  border: none;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  box-shadow: 0 6px 0 #695015;
+}
+
+.btn:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 0 #695015;
+}
+
+.btn:active {
+  transform: translateY(5px);
+  box-shadow: 0 2px 0 #695015;
+}
+
+/* ---------------- POPUP ---------------- */
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInPopup 0.4s ease;
+}
+
+@keyframes fadeInPopup {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.popup-content {
+  background: #1b1b1b;
+  width: 82%;
+  max-width: 400px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(255, 215, 95, 0.4);
+  animation: popupScale 0.4s ease;
+}
+
+@keyframes popupScale {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close {
+  margin-top: 15px;
+  padding: 10px 25px;
+  background: #e1b354;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}

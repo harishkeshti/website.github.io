@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Order Demo App</title>
+
+  <!-- CSS file -->
+  <link rel="stylesheet" href="food.css" />
+</head>
+
+<body>
+<header>
+  <h1>🍽️ FoodOrder — Demo <span class="muted">(DEMO MODE)</span></h1>
+  <div class="badge">DEMO PAYMENT</div>
+</header>
+
+<main class="container">
+  <!-- MENU SECTION -->
+  <section>
+    <h2>Menu</h2>
+    <p class="muted">Add your favorite items</p>
+
+    <div class="menu">
+
+      <!-- 🔥 Add your own images here -->
+      <!-- Sample Item 1 -->
+      <article class="card">
+        <img src="pizza.png" class="item-thumb" alt="Food 1" />
+        <div class="item-info">
+          <h3>Margherita Pizza</h3>
+          <p>Classic cheese & herbs</p>
+          <div class="row">
+            <div class="price">₹299</div>
+            <button class="add" data-id="m1">Add</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Sample Item 2 -->
+      <article class="card">
+        <img src="veg.png" class="item-thumb" alt="Food 2" />
+        <div class="item-info">
+          <h3>Veggie Burger</h3>
+          <p>Fresh veggies & sauce</p>
+          <div class="row">
+            <div class="price">₹199</div>
+            <button class="add" data-id="m2">Add</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Sample Item 3 -->
+      <article class="card">
+        <img src="pann.png" class="item-thumb" alt="Food 3" />
+        <div class="item-info">
+          <h3>Paneer Butter Masala</h3>
+          <p>Creamy tomato gravy</p>
+          <div class="row">
+            <div class="price">₹249</div>
+            <button class="add" data-id="m3">Add</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Sample Item 4 -->
+      <article class="card">
+        <img src="biryani.png" class="item-thumb" alt="Food 4" />
+        <div class="item-info">
+          <h3>Chicken Biryani</h3>
+          <p>Dum And Teasty</p>
+          <div class="row">
+            <div class="price">₹299</div>
+            <button class="add" data-id="m3">Add</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Sample Item 5 -->
+      <article class="card">
+        <img src="curd.png" class="item-thumb" alt="Food 5" />
+        <div class="item-info">
+          <h3>Curd Rics</h3>
+          <p>Curd gravy</p>
+          <div class="row">
+            <div class="price">₹149</div>
+            <button class="add" data-id="m3">Add</button>
+          </div>
+        </div>
+      </article>
+
+
+
+      <!-- Continue adding more items as you like -->
+
+    </div>
+  </section>
+
+  <!-- CART SECTION -->
+  <aside>
+    <div class="cart">
+      <h2>Your Order</h2>
+      <div id="cart-list" class="cart-list">
+        <p class="muted" id="empty-msg">Your cart is empty</p>
+      </div>
+
+      <div class="summary">
+        <span>Subtotal</span>
+        <span id="subtotal">₹0.00</span>
+      </div>
+      <p class="muted">Delivery: ₹40 included</p>
+
+      <button id="checkout-btn">Proceed to Checkout</button>
+      <button id="demo-pay" class="demo">Demo Payment</button>
+    </div>
+  </aside>
+</main>
+
+<!-- Checkout Modal -->
+<div id="overlay" class="overlay">
+  <div class="modal">
+    <h3>Checkout</h3>
+    <button id="close-checkout" class="close">X</button>
+
+    <form id="checkout-form">
+      <label>Name<input id="harsha" required /></label>
+      <label>Email<input id="harish@124" type="email" required /></label>
+      <label>Address<textarea id="suraam" required></textarea></label>
+
+      <button id="pay-now" type="button">Pay Now (Demo)</button>
+    </form>
+  </div>
+</div>
+
+<!-- Receipt Modal -->
+<div id="overlay2" class="overlay">
+  <div class="modal">
+    <h3>Payment Receipt</h3>
+    <button id="close-receipt" class="close">X</button>
+    <div id="receipt"></div>
+    <button id="done">Done</button>
+  </div>
+</div>
+
+<!-- JS file -->
+<script src="food.js"></script>
+</body>
+</html>

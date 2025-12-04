@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premium Fashion Store</title>
+  <link rel="stylesheet" href="shoping.css" />
+  <!-- Optional Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">✨ FashionHub</div>
+    <nav class="nav">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="men">Men</button>
+      <button class="filter-btn" data-category="women">Women</button>
+      <button class="filter-btn" data-category="kids">Kids</button>
+    </nav>
+  </header>
+
+  <!-- HERO SLIDESHOW -->
+  <section class="hero-slider">
+    <div class="slides">
+      <div class="slide active">
+        <img src="newo.jpg" alt="New Arrivals" />
+        <div class="slide-content">
+          <h1>New Season, New Style</h1>
+          <p>Premium outfits for every occasion.</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="mens.jpg" alt="Men Collection" />
+        <div class="slide-content">
+          <h1>Exclusive Men’s Collection</h1>
+          <p>Look sharp, feel confident.</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="women.jpg" alt="Women Collection" />
+        <div class="slide-content">
+          <h1>Elegant Women’s Wear</h1>
+          <p>Style that defines you.</p>
+        </div>
+      </div>
+    </div>
+
+    <button class="slider-btn prev">‹</button>
+    <button class="slider-btn next">›</button>
+
+    <div class="dots">
+      <span class="dot active" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+    </div>
+  </section>
+
+  <main class="main">
+    <!-- PRODUCT LIST -->
+    <section class="products">
+      <!-- MEN PRODUCTS -->
+      <div class="product-card" data-category="men">
+        <div class="product-img-wrapper">
+          <img src="men.jpg" alt="Classic White Shirt" />
+        </div>
+        <h3>Classic White Shirt</h3>
+        <p class="desc">Slim fit, 100% cotton, perfect for office.</p>
+        <p class="price">₹1,299</p>
+        <button class="add-to-cart-btn"
+          data-name="Classic White Shirt"
+          data-price="1299">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product-card" data-category="men">
+        <div class="product-img-wrapper">
+          <img src="men2.jpg" alt="Navy Formal Suit" />
+        </div>
+        <h3>Navy Formal Suit</h3>
+        <p class="desc">Premium tailored 2-piece suit.</p>
+        <p class="price">₹4,999</p>
+        <button class="add-to-cart-btn"
+          data-name="Navy Formal Suit"
+          data-price="4999">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- WOMEN PRODUCTS -->
+      <div class="product-card" data-category="women">
+        <div class="product-img-wrapper">
+          <img src="girl.jpg" alt="Evening Gown" />
+        </div>
+        <h3>Royal Evening Gown</h3>
+        <p class="desc">Floor length gown with elegant finish.</p>
+        <p class="price">₹3,499</p>
+        <button class="add-to-cart-btn"
+          data-name="Royal Evening Gown"
+          data-price="3499">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product-card" data-category="women">
+        <div class="product-img-wrapper">
+          <img src="girl2.jpg" alt="Designer Saree" />
+        </div>
+        <h3>Designer Silk Saree</h3>
+        <p class="desc">Soft silk saree with delicate border.</p>
+        <p class="price">₹2,999</p>
+        <button class="add-to-cart-btn"
+          data-name="Designer Silk Saree"
+          data-price="2999">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- KIDS PRODUCTS -->
+      <div class="product-card" data-category="kids">
+        <div class="product-img-wrapper">
+          <img src="kids.jpg" alt="Kids Party Dress" />
+        </div>
+        <h3>Kids Party Dress</h3>
+        <p class="desc">Cute and comfortable party wear.</p>
+        <p class="price">₹1,199</p>
+        <button class="add-to-cart-btn"
+          data-name="Kids Party Dress"
+          data-price="1199">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product-card" data-category="kids">
+        <div class="product-img-wrapper">
+          <img src="kids2.jpg" alt="Kids Sport Dress" />
+        </div>
+        <h3>Kids Sport Shoes</h3>
+        <p class="desc">Lightweight for everyday fun.</p>
+        <p class="price">₹999</p>
+        <button class="add-to-cart-btn"
+          data-name="Kids Sport Dress"
+          data-price="999">
+          Add to Cart
+        </button>
+      </div>
+    </section>
+
+    <!-- CART -->
+    <aside class="cart">
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <div class="cart-footer">
+        <p>Total: ₹<span id="cart-total">0</span></p>
+        <button id="pay-btn">Proceed to Payment (Demo)</button>
+        <p class="note">* Demo payment link – for project purpose only, no real payment.</p>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <p>FashionHub</p>
+  </footer>
+
+  <script src="shoping.js"></script>
+</body>
+</html>

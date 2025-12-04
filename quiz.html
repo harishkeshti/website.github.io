@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flag Quiz App</title>
+  <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+  <div class="quiz-container">
+    <h1>🌍 Flag Quiz</h1>
+    <p class="subtitle">Guess the country by its flag</p>
+
+    <div class="flag-box">
+      <img id="flag-image" src="" alt="Country Flag">
+    </div>
+
+    <p id="question-text">Which country's flag is this?</p>
+
+    <div id="options" class="options">
+      <!-- Option buttons created by JavaScript -->
+    </div>
+
+    <div id="message" class="message"></div>
+
+    <div class="bottom-row">
+      <span id="score-text">Score: 0</span>
+      <button id="next-btn" class="btn" disabled>Next ▶</button>
+    </div>
+  </div>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
